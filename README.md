@@ -2,30 +2,15 @@
 
 ![MSBuild](https://github.com/Whiteha/umdh-gui/workflows/MSBuild/badge.svg)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Release v1.0 download https://github.com/Whiteha/umdh-gui/releases/download/v1.0/umdh-gui.zip
 
-### What is this repository for? ###
+### About ###
+Simple GUI for umdh utility based on Qt framework.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+Features:
+- snapshot creation
+- report creation
+- report view
+- filtration for report view
+- sorting for report view
+- summary info
