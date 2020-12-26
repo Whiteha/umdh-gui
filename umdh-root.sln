@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umdh-datamodel", "umdh-datamodel\umdh-datamodel.vcxproj", "{72804360-B52A-3744-A040-FBCE8EAF08F6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umdh-datamodel-serializer", "umdh-datamodel-serializer\umdh-datamodel-serializer.vcxproj", "{F8ABB928-FA1E-3D56-901F-80326C1C032C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umdh-logic", "umdh-logic\umdh-logic.vcxproj", "{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "umdh-gui", "umdh-gui\umdh-gui.vcxproj", "{B90E920F-A9B7-3125-801A-DBFCB908C0EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618} = {2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}
+		{F8ABB928-FA1E-3D56-901F-80326C1C032C} = {F8ABB928-FA1E-3D56-901F-80326C1C032C}
+		{72804360-B52A-3744-A040-FBCE8EAF08F6} = {72804360-B52A-3744-A040-FBCE8EAF08F6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72804360-B52A-3744-A040-FBCE8EAF08F6}.Debug|x64.ActiveCfg = Debug|x64
+		{72804360-B52A-3744-A040-FBCE8EAF08F6}.Debug|x64.Build.0 = Debug|x64
+		{72804360-B52A-3744-A040-FBCE8EAF08F6}.Release|x64.ActiveCfg = Release|x64
+		{72804360-B52A-3744-A040-FBCE8EAF08F6}.Release|x64.Build.0 = Release|x64
+		{F8ABB928-FA1E-3D56-901F-80326C1C032C}.Debug|x64.ActiveCfg = Debug|x64
+		{F8ABB928-FA1E-3D56-901F-80326C1C032C}.Debug|x64.Build.0 = Debug|x64
+		{F8ABB928-FA1E-3D56-901F-80326C1C032C}.Release|x64.ActiveCfg = Release|x64
+		{F8ABB928-FA1E-3D56-901F-80326C1C032C}.Release|x64.Build.0 = Release|x64
+		{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}.Debug|x64.ActiveCfg = Debug|x64
+		{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}.Debug|x64.Build.0 = Debug|x64
+		{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}.Release|x64.ActiveCfg = Release|x64
+		{2FADEE8B-87D0-39B9-ABDF-D3A6C6CBE618}.Release|x64.Build.0 = Release|x64
+		{B90E920F-A9B7-3125-801A-DBFCB908C0EB}.Debug|x64.ActiveCfg = Debug|x64
+		{B90E920F-A9B7-3125-801A-DBFCB908C0EB}.Debug|x64.Build.0 = Debug|x64
+		{B90E920F-A9B7-3125-801A-DBFCB908C0EB}.Release|x64.ActiveCfg = Release|x64
+		{B90E920F-A9B7-3125-801A-DBFCB908C0EB}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		Qt5Version = 5.15.2
+		SolutionGuid = {6289900D-D83C-485F-B244-65D31D349555}
+	EndGlobalSection
+EndGlobal
