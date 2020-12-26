@@ -40,6 +40,7 @@ jobs:
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
-      with:
+      with:        
+        working-directory: ${{env.GITHUB_WORKSPACE}}
         name: bin
-        path: ${{env.Qt5_DIR}}/../../../bin/*
+        path: bin/*
