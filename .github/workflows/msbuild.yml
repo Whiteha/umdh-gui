@@ -16,35 +16,8 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Add MSBuild to PATH
-      uses: microsoft/setup-msbuild@v1
-    
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v2
-      with:
-        version: 5.15.2
-        setup-python: 'false'
-      
-    - uses: actions/checkout@v1
-    - uses: ilammy/msvc-dev-cmd@v1
-           
-    - name: Build
-      env:
-        QTDIR: ${{env.Qt5_DIR}}
-      working-directory: ${{env.GITHUB_WORKSPACE}}
-      # Add additional options to the MSBuild command line here (like platform or verbosity level).
-      # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: qmake ${{env.SOLUTION_FILE_PATH}} && nmake
-    
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
       with:
         name: bin
-        path: ${{env.GITHUB_WORKSPACE}}/bin
-    
-    - uses: actions/upload-artifact@v2
-      with:
-        name: umdh-gui
-        path: ${{env.GITHUB_WORKSPACE}}/bin/*
+        path: bin/*
