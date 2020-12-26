@@ -40,7 +40,6 @@ jobs:
     
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
-      with:        
-        working-directory: ${{env.GITHUB_WORKSPACE}}
-        name: bin
+      with:
+        name: umdh-gui
         path: bin/*
