@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportWidget</class>
+ <widget class="QWidget" name="ReportWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>813</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="reportForAnalyzeGroupBox">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>130</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Reports for analyze</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="2" column="1">
+       <widget class="QPushButton" name="removeReportPushButton">
+        <property name="toolTip">
+         <string>Remove snapshot from analyze</string>
+        </property>
+        <property name="text">
+         <string>Remove</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" rowspan="3">
+       <widget class="QListWidget" name="reportForAnalyzeListWidget">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>92</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="addReportPushButton">
+        <property name="toolTip">
+         <string>Add snapshot to analyze</string>
+        </property>
+        <property name="text">
+         <string>Add...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <spacer name="reportForAnalyzeVerticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="3" column="1">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>6</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTabWidget" name="reportView">
+     <property name="currentIndex">
+      <number>-1</number>
+     </property>
+     <property name="documentMode">
+      <bool>true</bool>
+     </property>
+     <property name="tabsClosable">
+      <bool>true</bool>
+     </property>
+     <property name="movable">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>reportForAnalyzeListWidget</tabstop>
+  <tabstop>addReportPushButton</tabstop>
+  <tabstop>removeReportPushButton</tabstop>
+  <tabstop>reportView</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,15 @@
+<nomodule>
+ntdll
+mscoree
+KERNELBASE
+KERNEL32
+clr
+user32
+win32u
+mscorlib.ni
+System.ni
+oleaut32
+combase
+System.Core.ni
+System.ComponentModel.Compositi
+msxml6

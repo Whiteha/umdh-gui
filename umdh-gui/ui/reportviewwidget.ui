@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReportViewWidget</class>
+ <widget class="QWidget" name="ReportViewWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>910</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>515</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="reportViewRootGroupBox">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>171</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox#reportViewRootGroupBox{ border:none }</string>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>6</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QGroupBox" name="reportViewGroupBox">
+        <property name="styleSheet">
+         <string notr="true">QGroupBox#reportViewGroupBox{ border:none }</string>
+        </property>
+        <property name="title">
+         <string notr="true"/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>6</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QPlainTextEdit" name="reportViewPlainTextEdit">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="controlsGroupBox">
+        <property name="maximumSize">
+         <size>
+          <width>241</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QGroupBox#controlsGroupBox{ border:none }</string>
+        </property>
+        <property name="title">
+         <string notr="true"/>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="reportViewFilterGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>75</width>
+             <height>292</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Filter</string>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <property name="topMargin">
+             <number>9</number>
+            </property>
+            <item row="4" column="0">
+             <widget class="QCheckBox" name="filterHideSystemCheckBox">
+              <property name="text">
+               <string>Hide system modules</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QCheckBox" name="filterWithSymbolsCheckBox">
+              <property name="text">
+               <string>With symbols</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QSpinBox" name="filterLeakedTimesSpinBox">
+              <property name="maximum">
+               <number>999999999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QCheckBox" name="filterWithPatternCheckBox">
+              <property name="text">
+               <string>With patterns:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QCheckBox" name="filterLeakedBytesCheckBox">
+              <property name="text">
+               <string>Allocated more than Kbytes:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QLineEdit" name="filterWithPatternLineEdit">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma-separated list &amp;quot;xxx, yyy, ...&amp;quot;,&lt;br/&gt;works via logical AND.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QCheckBox" name="filterWithoutPatternCheckBox">
+              <property name="text">
+               <string>Without patterns:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="filterLeakedTimesCheckBox">
+              <property name="text">
+               <string>Allocations count more than:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="6" column="0">
+             <widget class="QCheckBox" name="filterWithSourcesCheckBox">
+              <property name="text">
+               <string>With sources</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QSpinBox" name="filterLeakedBytesSpinBox">
+              <property name="maximum">
+               <number>999999999</number>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <widget class="QLineEdit" name="filterWithoutPatternLineEdit">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Comma-separated list &amp;quot;xxx, yyy, ...&amp;quot;,&lt;br/&gt;works via logical OR.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="reportViewSortingGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Sorting</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QComboBox" name="sortingTypeComboBox"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>88</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="infoGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Info by filtered data</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMaximumSize</enum>
+            </property>
+            <property name="bottomMargin">
+             <number>9</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QLabel" name="allocationsEventsLabel">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="uniqueStacksCountLabel">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="bytesAllocatedLabel">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>reportViewPlainTextEdit</tabstop>
+  <tabstop>filterLeakedBytesCheckBox</tabstop>
+  <tabstop>filterLeakedBytesSpinBox</tabstop>
+  <tabstop>filterLeakedTimesCheckBox</tabstop>
+  <tabstop>filterLeakedTimesSpinBox</tabstop>
+  <tabstop>filterHideSystemCheckBox</tabstop>
+  <tabstop>filterWithSymbolsCheckBox</tabstop>
+  <tabstop>filterWithSourcesCheckBox</tabstop>
+  <tabstop>filterWithPatternCheckBox</tabstop>
+  <tabstop>filterWithPatternLineEdit</tabstop>
+  <tabstop>filterWithoutPatternCheckBox</tabstop>
+  <tabstop>filterWithoutPatternLineEdit</tabstop>
+  <tabstop>sortingTypeComboBox</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
