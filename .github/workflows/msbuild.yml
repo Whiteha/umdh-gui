@@ -25,15 +25,17 @@ jobs:
       uses: jurplel/install-qt-action@v2
       with:
         version: 5.15.2
+        setup-python: 'false'
       
     - uses: actions/checkout@v1
     - uses: ilammy/msvc-dev-cmd@v1
-      
+    
+    - name: SetupQtDir
+      run: set QTDIR=%Qt5_DIR% && echo $QTDIR$
+         
     - name: Build
-      env:
-        QTDIR: ${Qt5_DIR}
       working-directory: ${{env.GITHUB_WORKSPACE}}
       # Add additional options to the MSBuild command line here (like platform or verbosity level).
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
-      run: set QTDIR=%Qt5_DIR% && qmake ${{env.SOLUTION_FILE_PATH}} && nmake
+      run: qmake ${{env.SOLUTION_FILE_PATH}} && nmake
 
