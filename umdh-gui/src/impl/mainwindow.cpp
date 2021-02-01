@@ -1,11 +1,13 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
 
 #include "umdhwidget.h"
 #include "reportwidget.h"
 #include "metamodel.h"
 
+#pragma warning(push, 0)
+#include "ui_mainwindow.h"
 #include <cassert>
+#pragma warning(pop)
 
 using namespace gui;
 

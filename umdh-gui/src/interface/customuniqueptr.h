@@ -1,8 +1,10 @@
 #ifndef CUSTOMUNIQUEPTR_H
 #define CUSTOMUNIQUEPTR_H
 
+#pragma warning(push, 0)
 #include <memory>
 #include <functional>
+#pragma warning(pop)
 
 namespace gui
 {
@@ -16,9 +18,9 @@ namespace gui
     }
 
     template <class T, class... Args>
-    unique_ptr<T> make_unique(Args&&... args)
+    auto make_unique(Args&&... args)
     {
-        return {new T {args...}, get_erased_deleter<T>() };
+        return unique_ptr<T> {new T {std::forward<Args>(args)...}, get_erased_deleter<T>() };
     }
 
     template <class To, class From>
@@ -31,7 +33,6 @@ namespace gui
             return result;
         }
         throw std::bad_cast();
-        return unique_ptr<To>(nullptr);
     }
 }
 

@@ -3,8 +3,10 @@
 
 #include "iserializable.h"
 
+#pragma warning(push, 0)
 #include <string>
 #include <functional>
+#pragma warning(pop)
 
 using SettingsObserver = std::function<void()>;
 

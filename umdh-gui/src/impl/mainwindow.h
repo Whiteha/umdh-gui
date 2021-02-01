@@ -1,9 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QLineEdit>
-
 #include "idatamodel/iobjectfactory.h"
 #include "idatamodelserializer/iserializerfactory.h"
 
@@ -11,6 +8,11 @@
 #include "ilogic/ifilterfactorycreator.h"
 #include "ilogic/isorterfactorycreator.h"
 #include "ilogic/iumdhcreator.h"
+
+#pragma warning(push, 0)
+#include <QMainWindow>
+#include <QLineEdit>
+#pragma warning(pop)
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -43,7 +45,7 @@ private:
     void createTabReport(const MainWindowArgs& mainWindowArgs);
 
 private:
-    Ui::MainWindow *m_pUi;
+    Ui::MainWindow *m_pUi = nullptr;
 
     gui::unique_ptr<gui::ISettings> m_pSettings;
     gui::unique_ptr<gui::IFilterFactory> m_pFilterFactory;

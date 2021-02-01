@@ -1,7 +1,5 @@
 #include "src/impl/mainwindow.h"
 
-#include <QApplication>
-
 #include "serializerfactorycreatorprovider.h"
 #include "objectfactorycreator.h"
 
@@ -10,6 +8,9 @@
 #include "filterfactorycreatorprovider.h"
 #include "sorterfactorycreatorprovider.h"
 
+#pragma warning(push, 0)
+#include <QApplication>
+#pragma warning(pop)
 
 int main(int argc, char *argv[])
 {

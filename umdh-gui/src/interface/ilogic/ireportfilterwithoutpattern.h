@@ -1,8 +1,10 @@
 #ifndef IREPORTFILTERWITHOUTPATTERN_H
 #define IREPORTFILTERWITHOUTPATTERN_H
 
+#pragma warning(push, 0)
 #include <string>
 #include <list>
+#pragma warning(pop)
 
 namespace gui
 {

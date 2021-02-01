@@ -1,7 +1,9 @@
 #ifndef IDATAOBJECT_H
 #define IDATAOBJECT_H
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace gui
 {

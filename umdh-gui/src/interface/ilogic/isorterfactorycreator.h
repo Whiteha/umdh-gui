@@ -1,7 +1,9 @@
 #ifndef ISORTERFACTORYCREATOR_H
 #define ISORTERFACTORYCREATOR_H
 
+#pragma warning(push, 0)
 #include "isorterfactory.h"
+#pragma warning(pop)
 
 namespace gui
 {

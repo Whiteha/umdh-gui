@@ -1,7 +1,9 @@
 #ifndef ISERIALIZER_H
 #define ISERIALIZER_H
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace gui
 {

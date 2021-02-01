@@ -97,8 +97,9 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <AdditionalDependencies>umdh-datamodel-serializer.lib;umdh-datamodel.lib;umdh-logic.lib;Psapi.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -158,8 +159,9 @@ $(QtDllPath)\windeployqt.exe ".\..\bin\umdh-gui.exe"</Command>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
       <AdditionalDependencies>umdh-datamodel-serializer.lib;umdh-datamodel.lib;umdh-logic.lib;Psapi.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -182,7 +184,8 @@ $(QtDllPath)\windeployqt.exe ".\..\bin\umdh-gui.exe"</Command>
       <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <PostBuildEvent>
-      <Command>copy /Y .\debug\umdh-gui.exe ".\..\bin"</Command>
+      <Command>copy /Y .\debug\umdh-gui.exe ".\..\bin"
+$(QtDllPath)\windeployqt.exe ".\..\bin\umdh-gui.exe"</Command>
       <Message>copy /Y .\debug\umdh-gui.exe ".\..\bin"</Message>
     </PostBuildEvent>
     <QtUic>

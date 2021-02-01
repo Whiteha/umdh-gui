@@ -1,10 +1,12 @@
 #include "reportwidget.h"
-#include "ui_reportwidget.h"
 
 #include "reportviewwidget.h"
 
+#pragma warning(push, 0)
 #include <QFileDialog>
 #include <QFileInfo>
+#include "ui_reportwidget.h"
+#pragma warning(pop)
 
 ReportWidget::ReportWidget(gui::IObjectFactory *pObjectFactory,
                            gui::ISerializerFactory *pSerializerFactory,
@@ -60,6 +62,7 @@ void ReportWidget::on_addReportPushButton_clicked()
 
     pReportManager->setSourceReport( path.toStdWString() );
     m_pUi->reportView->addTab(new ReportViewWidget(pReportManager, m_pFilterFactory, m_pSorterFactory), QFileInfo(path).fileName());
+    m_pUi->reportView->setTabToolTip(m_pUi->reportView->count() - 1, path);
     updateSourceReportsView();
 }
 

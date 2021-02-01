@@ -9,9 +9,11 @@
 
 #include "metamodel.h"
 
+#pragma warning(push, 0)
 #include <unordered_map>
 #include <functional>
 #include <cassert>
+#pragma warning(pop)
 
 using namespace datamodelserializer;
 

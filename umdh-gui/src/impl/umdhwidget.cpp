@@ -1,4 +1,6 @@
 #include "umdhwidget.h"
+
+#pragma warning(push, 0)
 #include "ui_umdhwidget.h"
 
 #include <QFileInfo>
@@ -12,6 +14,7 @@
 
 #include <Windows.h>
 #include <psapi.h>
+#pragma warning(pop)
 
 namespace
 {
@@ -78,7 +81,11 @@ namespace
     std::wstring getDateTimeStr()
     {
         auto t = std::time(nullptr);
+
+        #pragma warning(push)
+        #pragma warning(disable:4996)
         auto tm = *std::localtime(&t);
+        #pragma warning(pop)
 
         std::wostringstream woss;
         woss << std::put_time(&tm, L"%d_%m_%Y_%H_%M_%S");

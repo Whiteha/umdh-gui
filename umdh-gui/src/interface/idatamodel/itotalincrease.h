@@ -1,7 +1,9 @@
 #ifndef ITOTALINCREASE_H
 #define ITOTALINCREASE_H
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace gui
 {

@@ -4,7 +4,9 @@
 #include "ilogic/ireportfilterwithpattern.h"
 #include "cdefaultfilter.h"
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace logic
 {

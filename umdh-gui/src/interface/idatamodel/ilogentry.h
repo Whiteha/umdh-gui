@@ -5,8 +5,10 @@
 #include "iserializable.h"
 #include "customuniqueptr.h"
 
+#pragma warning(push, 0)
 #include <string>
 #include <vector>
+#pragma warning(pop)
 
 namespace gui
 {

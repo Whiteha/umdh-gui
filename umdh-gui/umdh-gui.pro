@@ -88,5 +88,5 @@ LIBS += -lPsapi
 PATH_TO_DEPLOY_TARGET_RAW = $$PWD/../bin
 PATH_TO_DEPLOY_TARGET = \"$$PATH_TO_DEPLOY_TARGET_RAW\"
 
-QMAKE_POST_LINK = copy /Y $$shell_path($$PATH_TO_TARGET_OUTPUT) $$shell_path($$PATH_TO_DEPLOY_TARGET) && $(QTDIR)\bin\windeployqt.exe $$PATH_TO_DEPLOY_TARGET_RAW\umdh-gui.exe
-message($(QTDIR)\bin\windeployqt.exe $$PATH_TO_DEPLOY_TARGET_RAW\umdh-gui.exe)
+QMAKE_POST_LINK = copy /Y $$shell_path($$PATH_TO_TARGET_OUTPUT) $$shell_path($$PATH_TO_DEPLOY_TARGET) && $(Qt5_Dir)\bin\windeployqt.exe $$PATH_TO_DEPLOY_TARGET_RAW\umdh-gui.exe
+#message($(Qt5_Dir)\bin\windeployqt.exe $$PATH_TO_DEPLOY_TARGET_RAW\umdh-gui.exe)

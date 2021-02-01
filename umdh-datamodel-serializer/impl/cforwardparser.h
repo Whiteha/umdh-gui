@@ -1,10 +1,13 @@
 #ifndef CFORWARDPARSER_H
 #define CFORWARDPARSER_H
 
+#include "customuniqueptr.h"
+
+#pragma warning(push, 0)
 #include <string>
 #include <vector>
 #include <functional>
-#include "customuniqueptr.h"
+#pragma warning(pop)
 
 namespace datamodelserializer
 {

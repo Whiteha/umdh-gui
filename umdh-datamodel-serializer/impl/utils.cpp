@@ -1,8 +1,10 @@
 #include "utils.h"
 #include "guiutils.h"
 
+#pragma warning(push, 0)
 #include <iomanip>
 #include <sstream>
+#pragma warning(pop)
 
 namespace
 {

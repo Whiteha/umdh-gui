@@ -1,10 +1,12 @@
 #ifndef GUIUTILS_H
 #define GUIUTILS_H
 
+#pragma warning(push, 0)
 #include <vector>
 #include <string>
 #include <iostream>
 #include <sstream>
+#pragma warning(pop)
 
 namespace gui
 {

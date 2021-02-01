@@ -1,8 +1,10 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+#pragma warning(push, 0)
 #include <string>
 #include <vector>
+#pragma warning(pop)
 
 namespace datamodelserializer
 {

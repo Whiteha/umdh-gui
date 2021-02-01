@@ -1,7 +1,9 @@
 #ifndef ILEAKEDMORETHANCOUNTFILTER_H
 #define ILEAKEDMORETHANCOUNTFILTER_H
 
+#pragma warning(push, 0)
 #include <cctype>
+#pragma warning(pop)
 
 namespace gui
 {

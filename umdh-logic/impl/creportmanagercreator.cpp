@@ -1,10 +1,10 @@
 #include "creportmanagercreator.h"
 #include "creportmanager.h"
+#include "chotpathcalculator.h"
 
-using namespace logic;
-
-gui::unique_ptr<gui::IReportManager> CReportManagerCreator::create(gui::IObjectFactory *pObjectFactory,
-                                                                   gui::ISerializerFactory *pSerializerFactory) const
+gui::unique_ptr<gui::IReportManager>
+logic::CReportManagerCreator::create(const gui::IObjectFactory *pObjectFactory,
+                                     const gui::ISerializerFactory *pSerializerFactory) const
 {
-    return gui::make_unique<CReportManager>(pObjectFactory, pSerializerFactory);
+    return gui::make_unique<CReportManager>(pObjectFactory, pSerializerFactory, gui::make_unique<logic::CHotPathCalculator>(pSerializerFactory));
 }

@@ -9,7 +9,9 @@
 #include "ilogic/ifilterfactory.h"
 #include "ilogic/isorterfactory.h"
 
+#pragma warning(push, 0)
 #include <QWidget>
+#pragma warning(pop)
 
 namespace Ui {
 class ReportWidget;
@@ -40,12 +42,12 @@ private:
     void removeReportViewTab(int index);
 
 private:
-    gui::IObjectFactory *m_pObjectFactory;
-    gui::ISerializerFactory *m_pSerializerFactory;
-    gui::IReportManagerCreator* m_pReportManagerCreator;
-    gui::IFilterFactory *m_pFilterFactory;
-    gui::ISorterFactory *m_pSorterFactory;
-    Ui::ReportWidget *m_pUi;
+    gui::IObjectFactory *m_pObjectFactory = nullptr;
+    gui::ISerializerFactory *m_pSerializerFactory = nullptr;
+    gui::IReportManagerCreator* m_pReportManagerCreator = nullptr;
+    gui::IFilterFactory *m_pFilterFactory = nullptr;
+    gui::ISorterFactory *m_pSorterFactory = nullptr;
+    Ui::ReportWidget *m_pUi = nullptr;
 
     std::vector<gui::unique_ptr<gui::IReportManager>> m_pReportManagers;
 };

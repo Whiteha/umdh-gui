@@ -2,12 +2,14 @@
 #include "guiutils.h"
 #include "customuniqueptr.h"
 
+#pragma warning(push, 0)
 #include <string>
 #include <vector>
 #include <fstream>
 #include <streambuf>
-
 #include <Windows.h>
+#pragma warning(pop)
+
 
 using namespace logic;
 

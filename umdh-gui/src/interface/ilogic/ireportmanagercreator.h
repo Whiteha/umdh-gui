@@ -12,8 +12,8 @@ struct IReportManagerCreator
 {
     virtual ~IReportManagerCreator() = default;
 
-    virtual gui::unique_ptr<IReportManager> create(gui::IObjectFactory*,
-                                                   gui::ISerializerFactory*) const = 0;
+    virtual gui::unique_ptr<IReportManager> create(const gui::IObjectFactory*,
+                                                   const gui::ISerializerFactory*) const = 0;
 };
 
 }

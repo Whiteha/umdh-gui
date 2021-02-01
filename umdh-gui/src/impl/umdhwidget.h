@@ -4,7 +4,9 @@
 #include "idatamodel/isettings.h"
 #include "ilogic/iumdh.h"
 
+#pragma warning(push, 0)
 #include <QWidget>
+#pragma warning(pop)
 
 namespace Ui {
 class UmdhWidget;
@@ -55,9 +57,9 @@ private:
                         bool isTargetProcessRunning,
                         bool isMultipleProcessesRunning);
 private:
-    gui::ISettings *m_pSettings;
-    gui::IUmdh *m_pUmdh;
-    Ui::UmdhWidget *m_pUi;
+    gui::ISettings *m_pSettings = nullptr;
+    gui::IUmdh *m_pUmdh = nullptr;
+    Ui::UmdhWidget *m_pUi = nullptr;
 };
 
 #endif // UMDHWIDGET_H

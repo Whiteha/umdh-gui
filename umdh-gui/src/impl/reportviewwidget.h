@@ -6,8 +6,11 @@
 #include "ilogic/isorterfactory.h"
 #include "ilogic/ireportfilter.h"
 
+#pragma warning(push, 0)
 #include <QWidget>
 #include <QProgressDialog>
+#include <QTreeWidgetItem>
+#pragma warning(pop)
 
 namespace Ui {
 class ReportViewWidget;
@@ -49,21 +52,41 @@ private slots:
 
     void on_filterWithoutPatternCheckBox_stateChanged(int arg1);
 
+    void on_reportViewPlainTextRadioButton_toggled(bool checked);
+
+    void on_reportViewListRadioButton_toggled(bool checked);
+
+    void on_reportViewCallsCountRadioButton_toggled(bool checked);
+
+    void on_reportViewCallStackTreeRadioButton_toggled(bool checked);
+
 private:
     void initDefaultState();
     void initFilters();
     void initSortingCombobox();
-    void updateSourceReportsView();
     void updateReportView(bool isInitialization = false);
     void updateFilter();
-    gui::unique_ptr<gui::IReportFilter> getActualFilter() const;
+    gui::unique_ptr<gui::IReportFilter> getFilter() const;
+    void updateActualReportRepresentation(std::function<void(int)> progressStateCallback);
+    void setCallTreeRepresentation(gui::ProgressNotifier &progressStateCallback);
+    void buildCallTreeRepresentation(const gui::CallTree &callTree,
+                                    const gui::CallTreeItem &current, 
+                                    QTreeWidgetItem *pParent, 
+                                    const int deep, 
+                                    const gui::CallTreePathId pathId);
+
+    void setPlainTextRepresentation(QString str);
+    void setListRepresentation(const gui::StackFrameDisplayDataList&);
+
+    QString getCallsCountData(const gui::CallsByCountMap&) const;
+    void updateCommonInfo();
 
 private:
-    gui::IReportManager *m_pReportManager;
-    gui::IFilterFactory *m_pFilterFactory;
-    gui::ISorterFactory *m_pSorterFactory;
-    Ui::ReportViewWidget *m_pUi;
-    QProgressDialog *m_pProgressDialog;
+    gui::IReportManager *m_pReportManager = nullptr;
+    gui::IFilterFactory *m_pFilterFactory = nullptr;
+    gui::ISorterFactory *m_pSorterFactory = nullptr;
+    Ui::ReportViewWidget *m_pUi = nullptr;
+    QProgressDialog *m_pProgressDialog = nullptr;
 };
 
 #endif // REPORTVIEWWIDGET_H

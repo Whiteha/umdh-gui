@@ -1,7 +1,10 @@
 #include "cumdh.h"
 
+#pragma warning(push, 0)
 #include <cassert>
 #include <windows.h>
+#pragma warning(pop)
+
 
 using namespace logic;
 

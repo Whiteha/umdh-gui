@@ -1,5 +1,8 @@
 #include "cbyallocationcountsorter.h"
+
+#pragma warning(push, 0)
 #include <algorithm>
+#pragma warning(pop)
 
 using namespace logic;
 

@@ -4,7 +4,9 @@
 #include "idatamodel/idataobject.h"
 #include "customuniqueptr.h"
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace gui
 {

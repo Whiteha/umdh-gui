@@ -1,7 +1,9 @@
 #include "ctotalincrease.h"
 #include "customuniqueptr.h"
 
+#pragma warning(push, 0)
 #include <cassert>
+#pragma warning(pop)
 
 using namespace datamodel;
 

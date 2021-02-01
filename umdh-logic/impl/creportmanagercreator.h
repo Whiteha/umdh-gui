@@ -8,8 +8,8 @@ namespace logic
     class CReportManagerCreator : public gui::IReportManagerCreator
     {
     public:
-        gui::unique_ptr<gui::IReportManager> create(gui::IObjectFactory*,
-                                                    gui::ISerializerFactory*) const override;
+        gui::unique_ptr<gui::IReportManager> create(const gui::IObjectFactory*,
+                                                    const gui::ISerializerFactory*) const override;
     };
 }
 

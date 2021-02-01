@@ -4,9 +4,12 @@
 #include "cbyallocatedbytessorter.h"
 #include "metamodel.h"
 
+#pragma warning(push, 0)
 #include <cassert>
 #include <unordered_map>
 #include <functional>
+#pragma warning(pop)
+
 
 using namespace logic;
 

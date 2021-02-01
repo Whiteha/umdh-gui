@@ -1,7 +1,9 @@
 #ifndef IUMDH_H
 #define IUMDH_H
 
+#pragma warning(push, 0)
 #include <string>
+#pragma warning(pop)
 
 namespace gui
 {

@@ -7,7 +7,9 @@
 
 #include "iserializable.h"
 
+#pragma warning(push, 0)
 #include <vector>
+#pragma warning(pop)
 
 namespace gui
 {

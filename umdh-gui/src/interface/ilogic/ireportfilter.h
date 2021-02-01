@@ -3,8 +3,10 @@
 
 #include "idatamodel/ireport.h"
 
+#pragma warning(push, 0)
 #include <vector>
 #include <functional>
+#pragma warning(pop)
 
 namespace gui
 {

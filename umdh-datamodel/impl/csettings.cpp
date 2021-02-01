@@ -1,6 +1,8 @@
 #include "csettings.h"
 
+#pragma warning(push, 0)
 #include <cassert>
+#pragma warning(pop)
 
 using namespace datamodel;
 

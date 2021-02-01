@@ -26,6 +26,7 @@ SOURCES += \
     impl/cdefaultsorter.cpp \
     impl/cfilterfactory.cpp \
     impl/cfilterfactorycreator.cpp \
+    impl/chotpathcalculator.cpp \
     impl/cleakedmorethanbytesfilter.cpp \
     impl/cleakedmorethancountfilter.cpp \
     impl/creportmanager.cpp \
@@ -52,6 +53,7 @@ HEADERS += \
     impl/cdefaultsorter.h \
     impl/cfilterfactory.h \
     impl/cfilterfactorycreator.h \
+    impl/ihotpathcalculator.h \
     impl/cleakedmorethanbytesfilter.h \
     impl/cleakedmorethancountfilter.h \
     impl/creportmanager.h \
@@ -65,6 +67,7 @@ HEADERS += \
     impl/cwithpatternfilter.h \
     impl/cwithsourcesfilter.h \
     impl/cwithsymbolsfilter.h \
+    impl/chotpathcalculator.h \
     interface/filterfactorycreatorprovider.h \
     interface/reportmanagercreatorprovider.h \
     interface/sorterfactorycreatorprovider.h \

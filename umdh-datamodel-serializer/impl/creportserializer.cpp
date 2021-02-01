@@ -2,7 +2,10 @@
 #include "cforwardparser.h"
 #include "utils.h"
 #include "metamodel.h"
+
+#pragma warning(push, 0)
 #include <cassert>
+#pragma warning(pop)
 
 namespace
 {
