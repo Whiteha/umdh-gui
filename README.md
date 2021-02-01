@@ -2,7 +2,7 @@
 
 ![MSBuild](https://github.com/Whiteha/umdh-gui/workflows/MSBuild/badge.svg)
 
-Release v1.0 [download](https://github.com/Whiteha/umdh-gui/releases/download/v1.0/umdh-gui.zip)
+Release v1.1 [download](https://github.com/Whiteha/umdh-gui/releases/download/v1.1/umdh-gui.zip)
 
 ### About ###
 Simple GUI app for umdh utility based on Qt framework.
