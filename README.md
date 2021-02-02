@@ -26,3 +26,5 @@ Page-wrapper for umdh
 
 Reports viewer
 ![2](https://user-images.githubusercontent.com/5871853/106532429-3a27ed80-6501-11eb-9eed-0555e108e6d8.png)
+
+*Build was tested with Visual Studio 2019 (v142)
